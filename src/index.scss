@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  display: flex;
+  margin-top: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  &__time {
+    height: 20px;
+    flex: 1;
+    text-align: left;
+  }
+  &__title {
+    height: 32px;
+    flex: 3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+  }
+  &__domain {
+    height: 32px;
+    flex: 1;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  background-color: coral;
+  border-radius: 8px;
+  padding: 8px;
+  max-width: 100%;
+  margin: auto;
+  padding: 10px 20px;
+  vertical-align: top;
+}
+.newList {
+  display: flex;
+  width: 25%;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+span {
+  margin-left: 12px;
+  color: white;
+}
+.news {
+  font-size: 15px;
+  display: flex;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+
+  &__time {
+    height: 32px;
+    flex: 1;
+  }
+  &__title {
+    height: 32px;
+    flex: 3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+    height: 3.9em;
+  }
+  &__domain {
+    height: 32px;
+    flex: 2;
+  }
+}
+a {
+  border-radius: 8px;
+  background-color: wheat;
+  padding-top: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+a:nth-child(2n) {
+  background: #f0f0f0;
+}
+
+a:hover {
+  color: blue;
+}
+
+@media (max-width: 768px) {
+  .news {
+    &__time {
+      display: none;
+    }
+    &__title {
+      width: 100%;
+    }
+    &__domain {
+      display: none;
+    }
+  }
+  .title {
+    &__time {
+      position: fixed;
+      display: block;
+      text-transform: lowercase;
+      text-align: center;
+      background-color: darkgreen;
+      border-radius: 20%;
+      color: aliceblue;
+      padding: auto;
+    }
+    &__title {
+      display: none;
+    }
+    &__domain {
+      display: none;
+    }
+  }
+}
