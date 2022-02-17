@@ -1,7 +1,7 @@
 import { NEWS_RECIEVED, NAME_SHETTS } from "./table.actions";
 
 
-const initialState = { newsData: [], toTitleHeder: "", name: "news" };
+const initialState = { newsData: [], toTitleHeder: "", name: "news", numPage:1 };
 const newsReducer = (state = initialState, action) => {
   switch (action.type) {
     case NEWS_RECIEVED: {
